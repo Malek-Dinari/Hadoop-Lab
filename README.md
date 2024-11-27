@@ -78,10 +78,10 @@ xml
     <value>hdfs://localhost:9000</value>
   </property>
 </configuration>
-hadoop-env.sh
-Ensure the JAVA_HOME variable is set:
 ```
 
+hadoop-env.sh
+Ensure the JAVA_HOME variable is set:
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 mapred-site.xml
