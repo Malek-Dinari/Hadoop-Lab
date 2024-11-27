@@ -149,6 +149,27 @@ YARN Resource Manager: http://localhost:8088
 📸 Screenshots
 Screenshots showcasing the HDFS health overview and web interface functionality are located in the screenshots/ directory.
 
+---
+
+## 🌐 In a Nutshell
+1. Hadoop Binary Download: I initially downloaded the aarch64 version of Hadoop, but I discovered it only works under a real or virtual machine running Ubuntu. Therefore, I switched to downloading the regular binary version of Hadoop 3.4 since I was using Ubuntu in terminal (under windows).
+
+2. Configuration Modifications: I made several modifications to ensure proper functionality:
+
+* ~/.bashrc: Updated to include necessary environment variables.
+* hadoop-env.sh: Configured to set java home ( JAVA_HOME  )  and other required settings.
+* core-site.xml: Set fs.defaultFS to hdfs://localhost:9000.
+* mapred-site.xml: Configured with mapreduce.framework.name set to yarn.
+* HDFS Formatting and Starting Services: After configuring the files, I ran the command bin/hdfs namenode -format to create the necessary directory structure and initialize the HDFS.
+
+3. Public Key and Password Setup: I ensured passwordless SSH access was set up for seamless communication between the master and slave nodes, facilitating easier management.
+
+4. Starting HDFS: I executed the command start-dfs.sh to initiate the Hadoop Distributed File System.
+
+5. Web Interface Verification: Finally, I accessed the Hadoop web interface by opening http://localhost:9870 in my browser, where I confirmed that the NameNode was active and functioning correctly.
+
+
+---
 
 
 📖 Key Insights
